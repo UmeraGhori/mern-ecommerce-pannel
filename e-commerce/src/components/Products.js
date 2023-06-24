@@ -10,14 +10,14 @@ const Products = () => {
   }, [])
 
   const getData = async () => {
-    let result = await fetch("http://localhost:5000/products");
+    let result = await fetch("https://mern-ecommerce-pannel.onrender.com/products");
       result = await result.json();
       setData(result);
   }
   console.log(data);
 
   const DeleteData = async (id) => {
-    let result = await fetch(`http://localhost:5000/product/${id}`, {
+    let result = await fetch(`https://mern-ecommerce-pannel.onrender.com/product/${id}`, {
       method: "Delete"
     });
     result = await result.json();
@@ -28,7 +28,7 @@ const Products = () => {
   const SearchHandle = async (event) => {
     let key = event.target.value;
     if(key){
-    let result = await fetch(`http://localhost:5000/search/${key}`);
+    let result = await fetch(`https://mern-ecommerce-pannel.onrender.com/search/${key}`);
     result = await result.json();
     if(result){
       setData(result);

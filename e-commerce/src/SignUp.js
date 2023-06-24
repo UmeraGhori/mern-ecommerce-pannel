@@ -26,7 +26,7 @@ const SignUp = () => {
     }
     const collectData = async () => {
         console.log(input);
-        let result = await fetch("http://localhost:5000/register", {
+        let result = await fetch("https://mern-ecommerce-pannel.onrender.com/register", {
             method: "post",
             body: JSON.stringify(input),
             headers: {

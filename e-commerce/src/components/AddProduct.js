@@ -11,7 +11,7 @@ const AddProduct = () => {
       return false;
     }
 
-  let result = await fetch("http://localhost:5000/addProduct", {
+  let result = await fetch("https://mern-ecommerce-pannel.onrender.com/addProduct", {
     method: "post",
     body: JSON.stringify(input),
     headers: {

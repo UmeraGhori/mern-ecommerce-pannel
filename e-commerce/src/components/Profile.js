@@ -11,7 +11,7 @@ const Profile = () => {
 
   const updateData = async () => {
     console.log(input);
-    let result = await fetch(`http://localhost:5000/profile/${params.id}`,{
+    let result = await fetch(`https://mern-ecommerce-pannel.onrender.com/profile/${params.id}`,{
       method: "Put",
       body: JSON.stringify(input),
       headers: {
@@ -38,7 +38,7 @@ const Profile = () => {
   }, []);
 
   const getDetails = async () => {
-    let result = await fetch(`http://localhost:5000/profile/${params.id}`);
+    let result = await fetch(`https://mern-ecommerce-pannel.onrender.com/profile/${params.id}`);
     result = await result.json();
     setInput(result)
   }

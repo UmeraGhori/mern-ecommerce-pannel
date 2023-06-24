@@ -26,7 +26,7 @@ const Login = () => {
 
     const collectData = async () => {
         console.log(input);
-        let result = await fetch("http://localhost:5000/login", {
+        let result = await fetch("https://mern-ecommerce-pannel.onrender.com/login", {
         method: "post",
         body: JSON.stringify(input),
         headers: {

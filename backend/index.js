@@ -9,6 +9,8 @@ const User = require("./db/User");
 
 const Product = require("./db/Product")
 
+const PORT = process.env.PORT  || 5000;
+
 const app = express();
 
 app.use(express.json());
@@ -113,4 +115,6 @@ app.put("/profile/:id", async (req, res) => {
     res.send(result);
 })
 
-app.listen(5000);
+app.listen(PORT, () => {
+    console.log("Server is running on Port" + PORT);
+});

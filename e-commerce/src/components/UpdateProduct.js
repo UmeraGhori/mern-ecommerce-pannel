@@ -8,7 +8,7 @@ const UpdateProduct = () => {
 
   const updateData = async () => {
     console.log(input);
-    let result = await fetch(`http://localhost:5000/product/${params.id}`,{
+    let result = await fetch(`https://mern-ecommerce-pannel.onrender.com/product/${params.id}`,{
       method: "Put",
       body: JSON.stringify(input),
       headers: {
@@ -36,7 +36,7 @@ const UpdateProduct = () => {
   }, []);
 
   const getDetails = async () => {
-    let result = await fetch(`http://localhost:5000/product/${params.id}`);
+    let result = await fetch(`https://mern-ecommerce-pannel.onrender.com/product/${params.id}`);
     result = await result.json();
     setInput(result)
   }
