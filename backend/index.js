@@ -1,5 +1,9 @@
 const express = require("express");
 
+require("dotenv").config();
+
+console.log(process.env.PORT)
+
 const mongoose = require("mongoose");
 
 const cors = require("cors");
@@ -115,9 +119,9 @@ app.put("/profile/:id", async (req, res) => {
     res.send(result);
 })
 
-const PORT = process.env.PORT;
+const port = process.env.PORT;
 
-app.listen(PORT, () => {
-    console.log("Server is running on Port" + PORT);
+app.listen(port, () => {
+    console.log("Server is running on Port" + port);
 });
 
