@@ -9,14 +9,26 @@
 // });
 
 
-const mongoose = require("mongoose");
-const connectDB = async () => {
-    try{
-        await mongoose.connect(process.env.MONGO_CONNECT_URI)
-        console.log("Connect to MongoDB Successfully")
-    } catch (error){
-        console.log("Connect Failed" + error.message);
-    }
-}
+// const mongoose = require("mongoose");
+// const connectDB = async () => {
+//     try{
+//         await mongoose.connect(process.env.MONGO_CONNECT_URI)
+//         console.log("Connect to MongoDB Successfully")
+//     } catch (error){
+//         console.log("Connect Failed" + error.message);
+//     }
+// }
 
-module.exports = connectDB
+// module.exports = connectDB
+
+
+
+const mongoose = require("mongoose");
+
+mongoose.connect(process.env.MONGO_CONNECT_URI, {
+    
+}).then(() => {
+    console.log(`connection successful`);
+}).catch((e) => {
+    console.log(`no connection`)
+});
